@@ -5,3 +5,4 @@
 
 5 step - https://asciinema.org/a/663539
 6 step - https://asciinema.org/a/8LaPTiBC8ccK04AhFaItv5l2l
+7 step - [![asciicast](https://asciinema.org/a/663619.svg)](https://asciinema.org/a/663619)
