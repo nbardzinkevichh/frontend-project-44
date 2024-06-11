@@ -8,8 +8,8 @@ console.log('What is the result of the expression?');
 let correctAnswers = 0;
 let i = 0;
 while (i < 3) {
-  const firstNumber = getRandomNumber(1000);
-  const secondNumber = getRandomNumber(1000);
+  const firstNumber = getRandomNumber(60);
+  const secondNumber = getRandomNumber(60);
   const signs = ['+', '-', '*'];
   const randomSign = signs[Math.floor(Math.random() * 3)];
   let answer = '';
