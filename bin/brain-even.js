@@ -1,12 +1,28 @@
 #!/usr/bin/env node
 
 import greetPlayer from '../src/cli.js';
-import gameProcess, { askQuestion } from '../src/index.js';
+import {
+  askQuestion, getRandomNumber, isAnswerCorrect, gameFinish,
+} from '../src/index.js';
 
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-const randomNumber = Math.floor(Math.random() * 1000);
-const answer = randomNumber % 2 === 0 ? 'yes' : 'no';
-const question = askQuestion(`Question: ${randomNumber}\n`);
+let correctAnswers = 0;
+let i = 0;
+while (i < 3) {
+  const randomNumber = getRandomNumber(1000);
+  const answer = randomNumber % 2 === 0 ? 'yes' : 'no';
+  const question = askQuestion(`Question: ${randomNumber}\n`);
 
-gameProcess(question, answer);
+  if (!isAnswerCorrect(question, answer)) {
+    break;
+  } else {
+    correctAnswers += 1;
+  }
+
+  i += 1;
+}
+
+gameFinish(correctAnswers);
+
+// gameProcess(question, answer);

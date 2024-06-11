@@ -7,7 +7,3 @@ export default function greetPlayer() {
 
   return name;
 }
-
-
-
-
