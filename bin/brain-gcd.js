@@ -15,7 +15,6 @@ while (i < 3) {
   const secondNumber = getRandomNumber(500);
   let answer = gcd(firstNumber, secondNumber);
 
-  console.log(answer);
   const question = askQuestion(`${firstNumber} ${secondNumber}\nYour answer: `);
 
   if (!isAnswerCorrect(question, answer.toString())) {
