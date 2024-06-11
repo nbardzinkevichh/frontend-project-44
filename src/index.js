@@ -5,15 +5,14 @@ const name = greetPlayer();
 
 const askQuestion = (question) => {
   const userQuestion = readlineSync.question(question);
-  return userQuestion;
 }
 
 const gameProcess = (question, answer) => {
   let rightAnswers = 0;
   let i = 0;
   while (i < 3) {
-    const userQuestion = askQuestion(question);
-    if (!isAnswerCorrect(userQuestion, answer)) {
+    const playerQuestion = askQuestion(question);
+    if (!isAnswerCorrect(playerQuestion, answer)) {
       break;
     } else {
       rightAnswers += 1;
@@ -26,12 +25,14 @@ const gameProcess = (question, answer) => {
 const isAnswerCorrect = (question, answer) => {
   if (question !== answer) {
     console.log(`'${question}' is wrong answer ;(. Correct answer was '${answer}'.`);
-    return 0;
+    return 1;
   } else {
     console.log('Correct');
-    return 1;
+    return 0;
   }
 }
+
+
 
 const gameFinish = (rightAnswers) => {
   if (rightAnswers === 3) {
@@ -39,4 +40,4 @@ const gameFinish = (rightAnswers) => {
   }
 }
 
-export {askQuestion, gameProcess, greetPlayer as default};
+export {askQuestion, gameProcess as default};
