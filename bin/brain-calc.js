@@ -21,7 +21,7 @@ while (i < 3) {
     answer = firstNumber * secondNumber;
   }
 
-  const question = askQuestion(`${firstNumber} ${randomSign} ${secondNumber}\nYour answer: `);
+  const question = askQuestion(`Question: ${firstNumber} ${randomSign} ${secondNumber}\nYour answer: `);
 
   if (!isAnswerCorrect(question, answer.toString())) {
     break;
