@@ -14,7 +14,7 @@ while (i < 3) {
   const secondNumber = getRandomNumber(500);
   const answer = gcd(firstNumber, secondNumber);
 
-  const question = askQuestion(`${firstNumber} ${secondNumber}\nYour answer: `);
+  const question = askQuestion(`Question: ${firstNumber} ${secondNumber}\nYour answer: `);
 
   if (!isAnswerCorrect(question, answer.toString())) {
     break;
