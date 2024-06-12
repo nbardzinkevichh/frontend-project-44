@@ -19,7 +19,7 @@ const isPrime = (number) => {
     j += 1;
   }
   return divisors === 1 ? 'yes' : 'no';
-}
+};
 
 while (i < 3) {
   const randomNumber = getRandomNumber(200);
