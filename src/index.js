@@ -27,7 +27,7 @@ const getRandomNumber = (param) => Math.floor(Math.random() * param);
 
 const isAnswerCorrect = (question, answer) => {
   if (question !== answer) {
-    console.log(`'${question}' is wrong answer ;(. Correct answer was '${answer}'.`);
+    console.log(`'${question}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}!`);
     return 0;
   }
   console.log('Correct');
