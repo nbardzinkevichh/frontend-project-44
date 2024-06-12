@@ -7,3 +7,4 @@
 6 step - https://asciinema.org/a/8LaPTiBC8ccK04AhFaItv5l2l
 7 step - [![asciicast](https://asciinema.org/a/663619.svg)](https://asciinema.org/a/663619)
 8 step - https://asciinema.org/a/663621
+9 step - https://asciinema.org/a/TRj20OCXVtwbujn9ummLmd4BA
