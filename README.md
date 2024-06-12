@@ -8,6 +8,7 @@
 ```bash
 make install
 ```
+
 ### Asciinema каждого шага
 **5 step** - [![asciicast](https://asciinema.org/a/663539.svg)](https://asciinema.org/a/663539)
 **6 step** - [![asciicast](https://asciinema.org/a/663562.svg)](https://asciinema.org/a/663562)
