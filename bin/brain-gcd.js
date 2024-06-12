@@ -1,19 +1,18 @@
 #!/usr/bin/env node
 
+import gcd from 'compute-gcd';
 import {
   askQuestion, getRandomNumber, isAnswerCorrect, gameFinish,
 } from '../src/index.js';
 
-import gcd from 'compute-gcd';
-
-console.log('Find the greatest common divisor of given numbers.')
+console.log('Find the greatest common divisor of given numbers.');
 
 let correctAnswers = 0;
 let i = 0;
 while (i < 3) {
   const firstNumber = getRandomNumber(500);
   const secondNumber = getRandomNumber(500);
-  let answer = gcd(firstNumber, secondNumber);
+  const answer = gcd(firstNumber, secondNumber);
 
   const question = askQuestion(`${firstNumber} ${secondNumber}\nYour answer: `);
 

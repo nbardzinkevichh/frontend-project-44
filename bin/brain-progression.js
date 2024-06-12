@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import greetPlayer from '../src/cli.js';
 import {
   askQuestion, getRandomNumber, isAnswerCorrect, gameFinish,
 } from '../src/index.js';
@@ -17,9 +16,9 @@ const getProgression = (randomStep) => {
 
   const answer = progression[getRandomNumber(10)];
   const modifiedProgression = progression.join(' ').replace(answer, '..').split(' ');
-  
+
   return [modifiedProgression, answer];
-}
+};
 
 let correctAnswers = 0;
 let i = 0;
@@ -27,8 +26,8 @@ while (i < 3) {
   let randomStep = getRandomNumber(10);
   randomStep = getRandomNumber(2) === 0 ? -randomStep : randomStep;
   const [progression, answer] = getProgression(randomStep);
-  console.log(...progression); 
-  const question = askQuestion(`Your answer:\n`);
+  console.log(...progression);
+  const question = askQuestion('Your answer:\n');
 
   if (!isAnswerCorrect(question, answer.toString())) {
     break;

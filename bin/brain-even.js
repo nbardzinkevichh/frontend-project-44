@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import greetPlayer from '../src/cli.js';
 import {
   askQuestion, getRandomNumber, isAnswerCorrect, gameFinish,
 } from '../src/index.js';
