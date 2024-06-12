@@ -26,7 +26,7 @@ while (i < 3) {
   let randomStep = getRandomNumber(10);
   randomStep = getRandomNumber(2) === 0 ? -randomStep : randomStep;
   const [progression, answer] = getProgression(randomStep);
-  console.log(...progression);
+  console.log('Question: ', ...progression);
   const question = askQuestion('Your answer:\n');
 
   if (!isAnswerCorrect(question, answer.toString())) {
