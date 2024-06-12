@@ -23,5 +23,3 @@ while (i < 3) {
 }
 
 gameFinish(correctAnswers);
-
-// gameProcess(question, answer);
