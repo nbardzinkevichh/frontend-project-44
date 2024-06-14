@@ -1,8 +1,11 @@
 #!/usr/bin/env node
 
 import {
-  askQuestion, getRandomNumber, isAnswerCorrect, gameFinish,
-} from '../src/index.js';
+  askQuestion,
+  getRandomNumber,
+  isAnswerCorrect,
+  gameFinish,
+} from "../src/index.js";
 
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
@@ -10,15 +13,20 @@ let correctAnswers = 0;
 let i = 0;
 
 const isPrime = (number) => {
-  let divisors = 0;
-  let j = 0;
-  while (j < 10) {
-    if (number % j === 0) {
-      divisors += 1;
-    }
-    j += 1;
+  let isPrimeNumber = "yes";
+  if (number === 2) {
+    return isPrimeNumber;
   }
-  return divisors === 1 ? 'yes' : 'no';
+  let i = 2;
+  while (i <= Math.sqrt(number)) {
+    if (number % i === 0) {
+      isPrimeNumber = "no";
+      return isPrimeNumber;
+    } else {
+      i += 1;
+    }
+  }
+  return isPrimeNumber;
 };
 
 while (i < 3) {
@@ -26,7 +34,6 @@ while (i < 3) {
   let answer = 0;
 
   answer = isPrime(randomNumber);
-  console.log(answer);
   const question = askQuestion(`Question: ${randomNumber}\nYour answer: `);
 
   if (!isAnswerCorrect(question, answer)) {
