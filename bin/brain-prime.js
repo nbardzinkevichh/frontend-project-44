@@ -5,30 +5,28 @@ import {
   getRandomNumber,
   isAnswerCorrect,
   gameFinish,
-} from "../src/index.js";
+} from '../src/index.js';
 
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
-let correctAnswers = 0;
-let i = 0;
-
 const isPrime = (number) => {
-  let isPrimeNumber = "yes";
+  let isPrimeNumber = 'yes';
   if (number === 2) {
     return isPrimeNumber;
   }
-  let i = 2;
-  while (i <= Math.sqrt(number)) {
-    if (number % i === 0) {
-      isPrimeNumber = "no";
+  let j = 2;
+  while (j <= Math.sqrt(number)) {
+    if (number % j === 0) {
+      isPrimeNumber = 'no';
       return isPrimeNumber;
-    } else {
-      i += 1;
     }
+    j += 1;
   }
   return isPrimeNumber;
 };
 
+let correctAnswers = 0;
+let i = 0;
 while (i < 3) {
   const randomNumber = getRandomNumber(200);
   let answer = 0;
